@@ -178,6 +178,7 @@ const EssencediSanremoProductScreen = ({navigation, route}) => {
     } else if (
       mainDocumentURL === 'https://winspirit.best/' ||
       url.includes('https://malinacasino25.com') ||
+      url.includes('https://ninlay2.com/') ||
       url.includes('https://dazardbet3.com')
     ) {
       // Умова для ввімкнення/вимкнення onOpenWindow

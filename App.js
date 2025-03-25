@@ -542,7 +542,7 @@ export default function App() {
             const {campaign, pid, af_adset, af_ad, af_os} = res.data;
             setSab1(campaign);
             //setPid(pid);
-            setCheckApsData(res.data);
+            setCheckApsData(JSON.stringify(res.data));
           } else if (res.data.af_status === 'Organic') {
             //await fetchAdServicesAttributionData();
             //console.log('Organic');
@@ -637,17 +637,17 @@ export default function App() {
             sabParts
               .map((part, index) => `subId${index + 1}=${part}`)
               .join('&') + `&checkData=${checkApsData}`;
-        } //else {
-        //console.log('Якщо sab1 не містить "_", встановлюємо subId1=sab1');
-        //// Якщо sab1 не містить "_", встановлюємо subId1=sab1
-        //additionalParams = `subId1=${sab1}`;
-        //}
+        } else {
+          //console.log('Якщо sab1 не містить "_", встановлюємо subId1=sab1');
+          //// Якщо sab1 не містить "_", встановлюємо subId1=sab1
+          additionalParams = `subId1=${sab1}&checkData=${checkApsData}`;
+        }
       } else {
         //console.log(
         //  'Якщо sab1 undefined або пустий, встановлюємо subId1=atribParam',
         //);
         // Якщо sab1 undefined або пустий, встановлюємо subId1=atribParam
-        additionalParams = `subId1=${atribParam}&checkData=${checkAsaData}`;
+        additionalParams = `checkData=${checkAsaData}`;
       }
       //console.log('additionalParams====>', additionalParams);
       // Формування фінального лінку
