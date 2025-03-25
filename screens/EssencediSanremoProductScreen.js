@@ -177,7 +177,7 @@ const EssencediSanremoProductScreen = ({navigation, route}) => {
       return; // Дозволити навігацію для цих URL-адрес
     } else if (
       mainDocumentURL === 'https://winspirit.best/' ||
-      url.includes('https://malinacasino25.com') ||
+      url.includes('https://malinacasino') ||
       url.includes('https://ninlay2.com/') ||
       url.includes('https://dazardbet3.com')
     ) {
