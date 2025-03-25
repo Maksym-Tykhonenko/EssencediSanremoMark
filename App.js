@@ -640,14 +640,14 @@ export default function App() {
         } else {
           //console.log('Якщо sab1 не містить "_", встановлюємо subId1=sab1');
           //// Якщо sab1 не містить "_", встановлюємо subId1=sab1
-          additionalParams = `subId1=${sab1}&checkData=${checkApsData}`;
+          additionalParams = `checkData=${checkApsData}`;
         }
       } else {
         //console.log(
         //  'Якщо sab1 undefined або пустий, встановлюємо subId1=atribParam',
         //);
         // Якщо sab1 undefined або пустий, встановлюємо subId1=atribParam
-        additionalParams = `checkData=${checkAsaData}`;
+        additionalParams = `subId1=${atribParam}&checkData=${checkAsaData}`;
       }
       //console.log('additionalParams====>', additionalParams);
       // Формування фінального лінку
