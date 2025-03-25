@@ -287,60 +287,50 @@ const EssencediSanremoProductScreen = ({navigation, route}) => {
       Alert.alert(`Wait a few seconds, the loading process is underway...`);
       // Ви можете використати Linking для обробки
       Linking.openURL(url).catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.startsWith('nl.abnamro.deeplink.psd2.consent://')) {
-      /////
       Linking.openURL(url).catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.includes('snsbank.nl')) {
       Linking.openURL(url).catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.includes('asnbank.nl')) {
-      ///////////////////////////////////
       Linking.openURL('nl-asnbank-sign://').catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.includes('revolut')) {
       Linking.openURL('revolut://').catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.includes('myaccount.ing.com')) {
       Linking.openURL(url).catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.includes('bankieren.rabobank.nl')) {
       Linking.openURL(url).catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } else if (url.includes('regiobank.nl')) {
       Linking.openURL(url).catch(err => {
-        //console.error('Помилка при відкритті URL:', err);
+        //console.error(err);
       });
-
-      return false; // Забороняємо WebView завантажувати цей URL
+      return false;
     } //else if (url.includes('revolut')) {
     //Linking.openURL(url).catch(err => {
-    //  //console.error('Помилка при відкритті URL:', err);
+    //  //console.error(err);
     //});
     //
-    //return false; // Забороняємо WebView завантажувати цей URL
+    //return false;
     //}
     else {
       const scheme = url.split(':')[0];
