@@ -194,7 +194,8 @@ export default function App() {
         setAdServicesAtribution(parsedData.adServicesAtribution);
         setAceptTransperency(parsedData.aceptTransperency);
         //setTimeStampUserId(parsedData.timeStampUserId);
-        //
+        setCheckApsData(parsedData.checkApsData);
+        setCheckAsaData(parsedData.checkAsaData);
         setCompleteLink(parsedData.completeLink);
         setFinalLink(parsedData.finalLink);
         //
@@ -239,6 +240,8 @@ export default function App() {
         finalLink,
         completeLink,
         //timeStampUserId,
+        checkApsData,
+        checkAsaData,
       };
       const jsonData = JSON.stringify(data);
       await AsyncStorage.setItem('App', jsonData);
@@ -267,6 +270,8 @@ export default function App() {
     finalLink,
     completeLink,
     //timeStampUserId,
+    checkApsData,
+    checkAsaData,
   ]);
 
   const fetchAdServicesAttributionData = async () => {
